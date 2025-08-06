@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyFirstAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    GreetingScreen(
+                    MainScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

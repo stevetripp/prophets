@@ -3,8 +3,10 @@ package org.churchofjesuschrist.myfirstapp.ux.main
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
+import kotlinx.coroutines.flow.MutableStateFlow
 
 @HiltViewModel
 class MainViewModel @Inject constructor() : ViewModel() {
-    val name: String = "Android"
+    val name = MutableStateFlow("Android")
+    val uiState: MainUiState = MainUiState(name = name)
 }
