@@ -5,11 +5,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import org.churchofjesuschrist.myfirstapp.ui.theme.MyFirstAppTheme
+import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
-fun GreetingScreen(name: String, modifier: Modifier = Modifier) {
+fun GreetingScreen(
+    viewModel: MainViewModel = hiltViewModel(),
+    modifier: Modifier = Modifier
+) {
     Text(
-        text = "Hello $name!",
+        text = "Hello ${viewModel.name}!",
         modifier = modifier
     )
 }
@@ -18,6 +22,6 @@ fun GreetingScreen(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingScreenPreview() {
     MyFirstAppTheme {
-        GreetingScreen("Android")
+        GreetingScreen()
     }
 }

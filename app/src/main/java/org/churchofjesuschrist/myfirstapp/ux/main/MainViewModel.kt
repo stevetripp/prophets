@@ -6,6 +6,5 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor() : ViewModel() {
-    // Add your state and logic here
+    val name: String = "Android"
 }
-
