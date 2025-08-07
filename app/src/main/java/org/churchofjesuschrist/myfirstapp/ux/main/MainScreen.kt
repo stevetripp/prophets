@@ -1,13 +1,19 @@
 package org.churchofjesuschrist.myfirstapp.ux.main
 
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import kotlinx.coroutines.flow.MutableStateFlow
 import org.churchofjesuschrist.myfirstapp.ui.theme.MyFirstAppTheme
@@ -23,17 +29,22 @@ fun MainScreen(
 
 @Composable
 private fun MainContent(modifier: Modifier = Modifier, uiState: MainUiState) {
-    val name by uiState.name.collectAsState()
-    val imageUrl by uiState.imageUrl.collectAsState()
-     Column(modifier = modifier) {
-        Text(
-            text = "Hello $name!",
-        )
-        AsyncImage(
-            model = imageUrl,
-            contentDescription = "Sample image",
-            modifier = Modifier
-        )
+    val prophets by uiState.prophetsFlow.collectAsStateWithLifecycle()
+    Scaffold { paddingValues ->
+        LazyColumn(modifier = modifier.padding(paddingValues)) {
+            items(prophets) { prophet ->
+                ListItem(
+                    headlineContent = { Text(text = prophet.name) },
+                    leadingContent = {
+                        AsyncImage(
+                            model = prophet.imageUrl,
+                            contentDescription = "Prophet image",
+                            modifier = Modifier.size(56.dp)
+                        )
+                    }
+                )
+            }
+        }
     }
 }
 
@@ -43,8 +54,7 @@ private fun Preview() {
     MyFirstAppTheme {
         MainContent(
             uiState = MainUiState(
-                name = MutableStateFlow("Preview"),
-                imageUrl = MutableStateFlow("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80")
+                prophetsFlow = MutableStateFlow(emptyList())
             )
         )
     }
