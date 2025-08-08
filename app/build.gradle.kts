@@ -1,10 +1,11 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.hilt.android)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlin.kapt)
-    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.android.application.plugin)
+    alias(libs.plugins.androidx.room.plugin)
+    alias(libs.plugins.hilt.android.plugin)
+    alias(libs.plugins.kotlin.android.plugin)
+    alias(libs.plugins.kotlin.compose.plugin)
+    alias(libs.plugins.kotlin.serialization.plugin)
+    alias(libs.plugins.ksp.plugin)
 }
 
 android {
@@ -37,6 +38,10 @@ android {
     buildFeatures {
         compose = true
     }
+
+    room {
+        schemaDirectory("$projectDir/schemas")
+    }
 }
 
 dependencies {
@@ -56,6 +61,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
@@ -73,7 +80,9 @@ dependencies {
     implementation(libs.ktor.serialization.kotlinx.json.json)
     implementation(platform(libs.androidx.compose.bom))
 
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
+    ksp(libs.androidx.room.compiler)
 
     testImplementation(libs.junit)
+    testImplementation(libs.androidx.room.testing)
 }

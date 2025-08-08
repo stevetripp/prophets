@@ -1,5 +1,6 @@
 package org.churchofjesuschrist.myfirstapp.webservice
 
+import co.touchlab.kermit.Logger
 import io.ktor.client.call.body
 import io.ktor.client.plugins.resources.get
 import io.ktor.http.isSuccess
@@ -15,15 +16,16 @@ class LocalCdn @Inject constructor(
     private val httpClient = httpClientProvider.getCdnClient()
 
     suspend fun getProphets(): List<ProphetDto> {
-        println("[LocalCdn] getProphets called")
-        val response = httpClient.get(Prophets)
-        println("[LocalCdn] Response status: ${response.status}")
-        return if (response.status.isSuccess()) {
-            val body = response.body<List<ProphetDto>>()
-            println("[LocalCdn] Received prophets: $body")
-            body
-        } else {
-            println("[LocalCdn] Failed to fetch prophets, returning empty list")
+        return try {
+            val response = httpClient.get(Prophets)
+            if (response.status.isSuccess()) {
+                val body = response.body<List<ProphetDto>>()
+                body
+            } else {
+                emptyList()
+            }
+        } catch (e: Exception) {
+            Logger.e(e) { "Failed to fetch prophets from local CDN" }
             emptyList()
         }
     }
