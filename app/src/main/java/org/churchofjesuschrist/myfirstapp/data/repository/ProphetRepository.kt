@@ -36,5 +36,6 @@ class ProphetRepository @Inject constructor(
 
         return prophetsDao.getAllProphetsFlow()
     }
-}
 
+    fun getProphetByNameFlow(name: String): Flow<ProphetEntity?> = prophetsDao.getProphetByNameFlow(name)
+}
