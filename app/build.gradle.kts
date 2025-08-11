@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = "org.churchofjesuschrist.myfirstapp"
+    namespace = "org.churchofjesuschrist.prophets"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "org.churchofjesuschrist.myfirstapp"
+        applicationId = "org.churchofjesuschrist.prophets"
         minSdk = 26
         targetSdk = 36
         versionCode = 1

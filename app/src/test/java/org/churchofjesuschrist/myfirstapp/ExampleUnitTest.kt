@@ -1,4 +1,4 @@
-package org.churchofjesuschrist.myfirstapp
+package org.churchofjesuschrist.prophets
 
 import org.junit.Test
 
