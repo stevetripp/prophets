@@ -1,5 +1,6 @@
 package org.churchofjesuschrist.myfirstapp.ux.main
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -20,18 +21,21 @@ import org.churchofjesuschrist.myfirstapp.ui.theme.MyFirstAppTheme
 
 @Composable
 fun MainScreen(
-    modifier: Modifier = Modifier,
-    viewModel: MainViewModel = hiltViewModel()
+    viewModel: MainViewModel = hiltViewModel(),
+    onProphetClick: (String) -> Unit
 ) {
     val uiState = viewModel.uiState
-    MainContent(uiState = uiState, modifier = modifier)
+    MainContent(uiState = uiState/*, modifier = modifier*/, onProphetClick = onProphetClick)
 }
 
 @Composable
-private fun MainContent(modifier: Modifier = Modifier, uiState: MainUiState) {
+private fun MainContent(
+    uiState: MainUiState,
+    onProphetClick: (String) -> Unit
+) {
     val prophets by uiState.prophetsFlow.collectAsStateWithLifecycle()
     Scaffold { paddingValues ->
-        LazyColumn(modifier = modifier.padding(paddingValues)) {
+        LazyColumn(modifier = Modifier.padding(paddingValues)) {
             items(prophets) { prophet ->
                 ListItem(
                     headlineContent = { Text(text = prophet.name) },
@@ -41,7 +45,9 @@ private fun MainContent(modifier: Modifier = Modifier, uiState: MainUiState) {
                             contentDescription = "Prophet image",
                             modifier = Modifier.size(56.dp)
                         )
-                    }
+                    },
+                    modifier = Modifier
+                        .clickable { onProphetClick(prophet.name) }
                 )
             }
         }
@@ -55,7 +61,8 @@ private fun Preview() {
         MainContent(
             uiState = MainUiState(
                 prophetsFlow = MutableStateFlow(emptyList())
-            )
+            ),
+            onProphetClick = {}
         )
     }
 }

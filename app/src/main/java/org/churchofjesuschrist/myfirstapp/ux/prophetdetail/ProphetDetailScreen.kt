@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -37,13 +38,12 @@ fun ProphetDetailScreen(
     viewModel: ProphetDetailViewModel = hiltViewModel(),
     onNavigateBack: () -> Unit
 ) {
-    ProphetDetailContent(viewModel.uiState)
+    ProphetDetailContent(viewModel.uiState, onNavigateBack = onNavigateBack)
 }
 
 @Composable
 private fun ProphetDetailContent(
     uiState: ProphetDetailUiState,
-    modifier: Modifier = Modifier,
     onNavigateBack: () -> Unit = { /* Default no-op */ },
 ) {
     val prophet by uiState.prophetFlow.collectAsStateWithLifecycle()
@@ -54,7 +54,7 @@ private fun ProphetDetailContent(
                 title = { Text(text = prophet?.name ?: "") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 }
             )
@@ -62,10 +62,11 @@ private fun ProphetDetailContent(
     ) { innerPadding ->
         prophet?.let {
             Column(
-                modifier = modifier
+                modifier = Modifier
                     .fillMaxSize()
                     .verticalScroll(rememberScrollState())
-                    .padding(innerPadding),
+                    .padding(innerPadding)
+                    .padding(horizontal = 16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 AsyncImage(
@@ -74,7 +75,7 @@ private fun ProphetDetailContent(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(240.dp),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Fit
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 // Middle section: prophetCalled, born, apostleCalled, died (born after prophetCalled)
