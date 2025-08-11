@@ -11,22 +11,22 @@ import org.churchofjesuschrist.myfirstapp.webservice.dto.ProphetDto
 
 @Singleton
 class LocalCdn @Inject constructor(
-    private val httpClientProvider: HttpClientProvider,
+    httpClientProvider: HttpClientProvider,
 ) {
     private val httpClient = httpClientProvider.getCdnClient()
 
-    suspend fun getProphets(): List<ProphetDto> {
+    suspend fun getProphets(): Result<List<ProphetDto>> {
         return try {
             val response = httpClient.get(Prophets)
             if (response.status.isSuccess()) {
                 val body = response.body<List<ProphetDto>>()
-                body
+                Result.Success(body)
             } else {
-                emptyList()
+                Result.Error(Exception("HTTP error: ${response.status}"))
             }
         } catch (e: Exception) {
             Logger.e(e) { "Failed to fetch prophets from local CDN" }
-            emptyList()
+            Result.Error(e)
         }
     }
 

@@ -4,22 +4,22 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.launch
-import org.churchofjesuschrist.myfirstapp.webservice.LocalCdn
-import org.churchofjesuschrist.myfirstapp.webservice.dto.ProphetDto
+import org.churchofjesuschrist.myfirstapp.data.repository.ProphetRepository
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.SharingStarted
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    localCdn: LocalCdn
+    prophetRepository: ProphetRepository
 ) : ViewModel() {
-    val prophetsFlow = MutableStateFlow(emptyList<ProphetDto>())
+    private val prophetsFlow = prophetRepository.getProphetsFlow(viewModelScope)
 
-    val uiState: MainUiState = MainUiState(prophetsFlow = prophetsFlow)
+    val prophetsStateFlow = prophetsFlow
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = emptyList()
+        )
 
-    init {
-        viewModelScope.launch {
-            prophetsFlow.value = localCdn.getProphets()
-        }
-    }
+    val uiState: MainUiState = MainUiState(prophetsFlow = prophetsStateFlow)
 }

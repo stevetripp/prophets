@@ -1,0 +1,63 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a5e1a4c990b9d5f3741f3298f19a12f9",
+    "entities": [
+      {
+        "tableName": "Prophets",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`prophetCalled` TEXT, `born` TEXT, `apostleCalled` TEXT, `notableQuotes` TEXT NOT NULL, `name` TEXT NOT NULL, `died` TEXT, `imageUrl` TEXT NOT NULL, PRIMARY KEY(`name`))",
+        "fields": [
+          {
+            "fieldPath": "prophetCalled",
+            "columnName": "prophetCalled",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "born",
+            "columnName": "born",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "apostleCalled",
+            "columnName": "apostleCalled",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "notableQuotes",
+            "columnName": "notableQuotes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "died",
+            "columnName": "died",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "imageUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "name"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a5e1a4c990b9d5f3741f3298f19a12f9')"
+    ]
+  }
+}

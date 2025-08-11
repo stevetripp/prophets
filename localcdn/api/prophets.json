@@ -3,9 +3,9 @@
     "name": "Joseph Smith Jr.",
     "born": "December 23, 1805",
     "died": "June 27, 1844",
-    "apostle_called": null,
-    "prophet_called": "April 6, 1830",
-    "notable_quotes": [
+    "apostleCalled": null,
+    "prophetCalled": "April 6, 1830",
+    "notableQuotes": [
       "I told the brethren that the Book of Mormon was the most correct of any book on earth, and the keystone of our religion, and a man would get nearer to God by abiding by its precepts, than by any other book.",
       "The fundamental principles of our religion are the testimony of the apostles and prophets, concerning Jesus Christ, that He died, was buried, and rose again the third day, and ascended into heaven; and all other things which pertain to our religion are only appendages to it.",
       "If we have a religion that will not bear the test of all things, we do not want it; if it will not bear the test of earth, and heaven, and angels, we do not want it."
@@ -16,9 +16,9 @@
     "name": "Brigham Young",
     "born": "June 1, 1801",
     "died": "August 29, 1877",
-    "apostle_called": "February 14, 1835",
-    "prophet_called": "December 27, 1847",
-    "notable_quotes": [
+    "apostleCalled": "February 14, 1835",
+    "prophetCalled": "December 27, 1847",
+    "notableQuotes": [
       "This is the place.",
       "My faith is that the God of heaven will not suffer a people who are doing his will to be destroyed.",
       "The greatest fear I have is that the people of this Church will get rich in this country, forget God and his people, wax fat, and kick themselves out of the Church and go to hell."
@@ -29,9 +29,9 @@
     "name": "John Taylor",
     "born": "November 1, 1808",
     "died": "July 25, 1887",
-    "apostle_called": "December 19, 1838",
-    "prophet_called": "October 10, 1880",
-    "notable_quotes": [
+    "apostleCalled": "December 19, 1838",
+    "prophetCalled": "October 10, 1880",
+    "notableQuotes": [
       "I am as happy as the Lord can make me in my present condition, and I know that God is with me and will sustain me.",
       "We should be true to God, true to our families, true to our country, true to our friends, and true to ourselves.",
       "The kingdom of God is a government, and it is a government of principles, and the principles are the laws of righteousness."
@@ -42,9 +42,9 @@
     "name": "Wilford Woodruff",
     "born": "March 1, 1807",
     "died": "September 2, 1898",
-    "apostle_called": "April 26, 1839",
-    "prophet_called": "April 7, 1889",
-    "notable_quotes": [
+    "apostleCalled": "April 26, 1839",
+    "prophetCalled": "April 7, 1889",
+    "notableQuotes": [
       "I have had a great many revelations, and I have had a great many manifestations, and I have had a great many dreams and visions.",
       "The Lord will not suffer His people to be led astray if they will only listen to the counsel of the inspired leaders of the Church.",
       "The world is going to have to humble itself before the Lord, and it will have to repent of its sins, and it will have to obey the commandments of God."
@@ -55,9 +55,9 @@
     "name": "Lorenzo Snow",
     "born": "April 3, 1814",
     "died": "October 10, 1901",
-    "apostle_called": "February 12, 1849",
-    "prophet_called": "September 13, 1898",
-    "notable_quotes": [
+    "apostleCalled": "February 12, 1849",
+    "prophetCalled": "September 13, 1898",
+    "notableQuotes": [
       "As man is, God once was; as God is, man may be.",
       "We should be thankful for all things, and in all things give thanks.",
       "The Lord will always be with His people, and He will always sustain them if they will only be faithful to Him."
@@ -68,9 +68,9 @@
     "name": "Joseph F. Smith",
     "born": "November 13, 1838",
     "died": "November 19, 1918",
-    "apostle_called": "July 1, 1866",
-    "prophet_called": "October 17, 1901",
-    "notable_quotes": [
+    "apostleCalled": "July 1, 1866",
+    "prophetCalled": "October 17, 1901",
+    "notableQuotes": [
       "No man can preach the gospel unless he lives it.",
       "The greatest service we can render to the world is to be true to the gospel of Jesus Christ and to live it in our lives.",
       "The love of God is shed abroad in our hearts, and we should feel it in our souls, and we should be filled with it."
@@ -81,9 +81,9 @@
     "name": "Heber J. Grant",
     "born": "November 22, 1856",
     "died": "May 14, 1945",
-    "apostle_called": "October 16, 1882",
-    "prophet_called": "November 23, 1918",
-    "notable_quotes": [
+    "apostleCalled": "October 16, 1882",
+    "prophetCalled": "November 23, 1918",
+    "notableQuotes": [
       "That which we persist in doing becomes easier to do; not that the nature of the thing has changed, but that our power to do has increased.",
       "The Lord helps those who help themselves.",
       "The greatest blessing that can come to us is to be obedient to the commandments of God."
@@ -94,9 +94,9 @@
     "name": "George Albert Smith",
     "born": "April 4, 1870",
     "died": "April 4, 1951",
-    "apostle_called": "April 8, 1903",
-    "prophet_called": "May 21, 1945",
-    "notable_quotes": [
+    "apostleCalled": "April 8, 1903",
+    "prophetCalled": "May 21, 1945",
+    "notableQuotes": [
       "The Lord has a way of taking care of His own.",
       "The greatest happiness that we can have is to be in harmony with the will of the Lord.",
       "The Lord will not suffer His people to be led astray if they will only listen to the counsel of the inspired leaders of the Church."
@@ -107,9 +107,9 @@
     "name": "David O. McKay",
     "born": "September 8, 1873",
     "died": "January 18, 1970",
-    "apostle_called": "April 9, 1906",
-    "prophet_called": "April 9, 1951",
-    "notable_quotes": [
+    "apostleCalled": "April 9, 1906",
+    "prophetCalled": "April 9, 1951",
+    "notableQuotes": [
       "The home is the most important institution on earth and is the foundation of all righteous living.",
       "The gospel of Jesus Christ is a message of hope and joy.",
       "The Lord will always be with His people and will always sustain them if they will only be faithful to Him."
@@ -120,9 +120,9 @@
     "name": "Joseph Fielding Smith",
     "born": "July 19, 1876",
     "died": "July 2, 1972",
-    "apostle_called": "April 7, 1910",
-    "prophet_called": "January 23, 1970",
-    "notable_quotes": [
+    "apostleCalled": "April 7, 1910",
+    "prophetCalled": "January 23, 1970",
+    "notableQuotes": [
       "The greatest blessings of the Lord are promised to those who keep His commandments.",
       "The gospel of Jesus Christ is the power of God unto salvation.",
       "The Lord will always be with His people, and He will always sustain them if they will only be faithful to Him."
@@ -133,9 +133,9 @@
     "name": "Harold B. Lee",
     "born": "March 28, 1899",
     "died": "December 26, 1973",
-    "apostle_called": "April 10, 1941",
-    "prophet_called": "July 7, 1972",
-    "notable_quotes": [
+    "apostleCalled": "April 10, 1941",
+    "prophetCalled": "July 7, 1972",
+    "notableQuotes": [
       "The most important work you will ever do is within the walls of your own home.",
       "The gospel of Jesus Christ is the power of God unto salvation.",
       "The Lord will always be with His people, and He will always sustain them if they will only be faithful to Him."
@@ -146,9 +146,9 @@
     "name": "Spencer W. Kimball",
     "born": "March 28, 1895",
     "died": "November 5, 1985",
-    "apostle_called": "October 7, 1943",
-    "prophet_called": "December 30, 1973",
-    "notable_quotes": [
+    "apostleCalled": "October 7, 1943",
+    "prophetCalled": "December 30, 1973",
+    "notableQuotes": [
       "Do it.",
       "The Lord is a God of miracles, and He will work miracles in our lives if we will only be faithful to Him.",
       "The greatest happiness that we can have is to be in harmony with the will of the Lord."
@@ -159,9 +159,9 @@
     "name": "Ezra Taft Benson",
     "born": "August 4, 1899",
     "died": "May 30, 1994",
-    "apostle_called": "October 7, 1943",
-    "prophet_called": "November 10, 1985",
-    "notable_quotes": [
+    "apostleCalled": "October 7, 1943",
+    "prophetCalled": "November 10, 1985",
+    "notableQuotes": [
       "The Book of Mormon is the word of God. It is a book of truth, and it is a book of power. It is a book of inspiration, and it is a book of hope.",
       "Pride is the universal sin.",
       "The Lord will always be with His people, and He will always sustain them if they will only be faithful to Him."
@@ -172,9 +172,9 @@
     "name": "Howard W. Hunter",
     "born": "November 14, 1907",
     "died": "March 3, 1995",
-    "apostle_called": "October 10, 1959",
-    "prophet_called": "June 5, 1994",
-    "notable_quotes": [
+    "apostleCalled": "October 10, 1959",
+    "prophetCalled": "June 5, 1994",
+    "notableQuotes": [
       "I am an ordinary man. I have been given an extraordinary assignment. I have been called to be a prophet of God.",
       "The greatest blessings of the Lord are promised to those who keep His commandments.",
       "The gospel of Jesus Christ is the power of God unto salvation."
@@ -185,9 +185,9 @@
     "name": "Gordon B. Hinckley",
     "born": "June 23, 1910",
     "died": "January 27, 2008",
-    "apostle_called": "October 5, 1961",
-    "prophet_called": "March 12, 1995",
-    "notable_quotes": [
+    "apostleCalled": "October 5, 1961",
+    "prophetCalled": "March 12, 1995",
+    "notableQuotes": [
       "Our homes are our most important places of learning, our most important places of worship.",
       "The gospel of Jesus Christ is the power of God unto salvation.",
       "The Lord will always be with His people, and He will always sustain them if they will only be faithful to Him."
@@ -198,9 +198,9 @@
     "name": "Thomas S. Monson",
     "born": "August 21, 1927",
     "died": "January 2, 2018",
-    "apostle_called": "October 4, 1963",
-    "prophet_called": "February 3, 2008",
-    "notable_quotes": [
+    "apostleCalled": "October 4, 1963",
+    "prophetCalled": "February 3, 2008",
+    "notableQuotes": [
       "Choose to be happy.",
       "The greatest happiness that we can have is to be in harmony with the will of the Lord.",
       "The Lord will always be with His people, and He will always sustain them if they will only be faithful to Him."
@@ -211,9 +211,9 @@
     "name": "Russell M. Nelson",
     "born": "September 9, 1924",
     "died": null,
-    "apostle_called": "April 7, 1984",
-    "prophet_called": "January 14, 2018",
-    "notable_quotes": [
+    "apostleCalled": "April 7, 1984",
+    "prophetCalled": "January 14, 2018",
+    "notableQuotes": [
       "The temple is the house of the Lord.",
       "The gospel of Jesus Christ is the power of God unto salvation.",
       "The Lord will always be with His people, and He will always sustain them if they will only be faithful to Him."
