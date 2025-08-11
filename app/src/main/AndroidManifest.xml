@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".MyFirstApp"
+        android:name=".Prophets"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,14 +13,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyFirstApp"
+        android:theme="@style/Theme.Prophets"
         android:usesCleartextTraffic="true"
         >
         <activity
             android:name=".ux.main.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MyFirstApp"
+            android:theme="@style/Theme.Prophets"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

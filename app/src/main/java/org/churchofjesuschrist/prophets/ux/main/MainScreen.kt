@@ -17,7 +17,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import kotlinx.coroutines.flow.MutableStateFlow
-import org.churchofjesuschrist.prophets.ui.theme.MyFirstAppTheme
+import org.churchofjesuschrist.prophets.ui.theme.ProphetsTheme
 
 @Composable
 fun MainScreen(
@@ -57,7 +57,7 @@ private fun MainContent(
 @Preview(showBackground = true)
 @Composable
 private fun Preview() {
-    MyFirstAppTheme {
+    ProphetsTheme {
         MainContent(
             uiState = MainUiState(
                 prophetsFlow = MutableStateFlow(emptyList())

@@ -10,7 +10,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import dagger.hilt.android.AndroidEntryPoint
-import org.churchofjesuschrist.prophets.ui.theme.MyFirstAppTheme
+import org.churchofjesuschrist.prophets.ui.theme.ProphetsTheme
 import org.churchofjesuschrist.prophets.ux.prophetdetail.ProphetDetailRoute
 import org.churchofjesuschrist.prophets.ux.prophetdetail.ProphetDetailScreen
 
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyFirstAppTheme {
+            ProphetsTheme {
                 val navController = rememberNavController()
                 NavHost(
                     navController = navController,
