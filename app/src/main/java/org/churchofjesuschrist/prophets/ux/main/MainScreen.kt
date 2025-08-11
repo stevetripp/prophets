@@ -8,15 +8,18 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import kotlinx.coroutines.flow.MutableStateFlow
+import org.churchofjesuschrist.prophets.R
 import org.churchofjesuschrist.prophets.ui.theme.ProphetsTheme
 
 @Composable
@@ -34,7 +37,13 @@ private fun MainContent(
     onProphetClick: (String) -> Unit
 ) {
     val prophets by uiState.prophetsFlow.collectAsStateWithLifecycle()
-    Scaffold { paddingValues ->
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(text = stringResource(id = R.string.app_name)) }
+            )
+        }
+    ) { paddingValues ->
         LazyColumn(modifier = Modifier.padding(paddingValues)) {
             items(prophets) { prophet ->
                 ListItem(
