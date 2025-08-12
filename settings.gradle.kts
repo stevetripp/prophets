@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My First App"
+rootProject.name = "Prophets"
 include(":app")
