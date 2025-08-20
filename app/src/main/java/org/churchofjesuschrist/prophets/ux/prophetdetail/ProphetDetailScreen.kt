@@ -31,7 +31,12 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
+import java.util.Locale
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.toJavaLocalDate
 import org.churchofjesuschrist.prophets.data.local.entity.ProphetEntity
 import org.churchofjesuschrist.prophets.ui.preview.ProphetPreviewParameterProvider
 
@@ -106,9 +111,21 @@ private fun ProphetDetailContent(
     }
 }
 
+private fun formatDateForLocale(dateString: String?): String {
+    if (dateString.isNullOrBlank()) return ""
+    return try {
+        val date = LocalDate.parse(dateString)
+        val formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).withLocale(Locale.getDefault())
+        date.toJavaLocalDate().format(formatter)
+    } catch (e: Exception) {
+        dateString // fallback to original if parsing fails
+    }
+}
+
 @Composable
 private fun InfoRow(label: String, value: String?) {
-    if (!value.isNullOrBlank()) {
+    val formattedValue = formatDateForLocale(value)
+    if (formattedValue.isNotBlank()) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -122,7 +139,7 @@ private fun InfoRow(label: String, value: String?) {
                 modifier = Modifier.width(120.dp)
             )
             Text(
-                text = value,
+                text = formattedValue,
                 style = MaterialTheme.typography.bodyMedium
             )
         }
