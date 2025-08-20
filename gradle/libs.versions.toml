@@ -20,6 +20,7 @@ ktor = "3.2.3"
 lifecycleRuntimeKtx = "2.9.2"
 lifecycleViewModel = "2.9.2"
 room = "2.7.2"
+squareupOkio = "3.16.0"
 
 [libraries]
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -55,10 +56,13 @@ ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
 ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+ktor-client-mock = { group = "io.ktor", name = "ktor-client-mock", version.ref = "ktor" }
 ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-resources = { group = "io.ktor", name = "ktor-client-resources", version.ref = "ktor" }
 ktor-resources = { group = "io.ktor", name = "ktor-resources", version.ref = "ktor" }
 ktor-serialization-kotlinx-json-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json-jvm", version.ref = "ktor" }
+squareup-okio = { group = "com.squareup.okio", name = "okio", version.ref = "squareupOkio" }
+squareup-okio-assetfilesystem = { group = "com.squareup.okio", name = "okio-assetfilesystem", version.ref = "squareupOkio" }
 
 [plugins]
 android-application-plugin = { id = "com.android.application", version.ref = "agp" }

@@ -22,8 +22,13 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.toJavaLocalDate
 import org.churchofjesuschrist.prophets.R
+import org.churchofjesuschrist.prophets.ui.preview.ProphetListPreviewParameterProvider
 import org.churchofjesuschrist.prophets.ui.theme.ProphetsTheme
 
 @Composable
@@ -68,6 +73,11 @@ private fun MainContent(
                             modifier = Modifier.size(56.dp)
                         )
                     },
+                    supportingContent = {
+                        val called = formatMonthYear(prophet.prophetCalled)
+                        val died = formatMonthYear(prophet.died)
+                        Text(text = "$called - $died")
+                    },
                     modifier = Modifier
                         .clickable { onProphetClick(prophet.name) }
                 )
@@ -76,13 +86,19 @@ private fun MainContent(
     }
 }
 
-@Preview(showBackground = true)
+private fun formatMonthYear(dateString: String?): String {
+    return if (dateString.isNullOrBlank()) "Unknown"
+    else LocalDate.parse(dateString).toJavaLocalDate().format(DateTimeFormatter.ofPattern("MMM yyyy", Locale.getDefault()))
+}
+
+@Preview()
 @Composable
 private fun Preview() {
+    val prophets = ProphetListPreviewParameterProvider().values.toList()
     ProphetsTheme {
         MainContent(
             uiState = MainUiState(
-                prophetsFlow = MutableStateFlow(emptyList())
+                prophetsFlow = MutableStateFlow(prophets)
             ),
             onProphetClick = {}
         )

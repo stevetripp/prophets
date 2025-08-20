@@ -13,7 +13,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -32,6 +31,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
+import kotlinx.coroutines.flow.MutableStateFlow
+import org.churchofjesuschrist.prophets.data.local.entity.ProphetEntity
+import org.churchofjesuschrist.prophets.ui.preview.ProphetPreviewParameterProvider
 
 @Composable
 fun ProphetDetailScreen(
@@ -129,8 +131,8 @@ private fun InfoRow(label: String, value: String?) {
 
 @Preview(showBackground = true)
 @Composable
-fun ProphetDetailScreenPreview(
-    @PreviewParameter(ProphetDetailUiStatePreviewParameterProvider::class) uiState: ProphetDetailUiState
+private fun ProphetDetailScreenPreview(
+    @PreviewParameter(ProphetPreviewParameterProvider::class) prophet: ProphetEntity
 ) {
-    ProphetDetailContent(uiState)
+    ProphetDetailContent(ProphetDetailUiState(MutableStateFlow(prophet)))
 }
