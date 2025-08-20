@@ -40,7 +40,7 @@ private fun MainContent(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = stringResource(id = R.string.app_name)) }
+                title = { Text(text = stringResource(id = R.string.latter_day_prophets)) }
             )
         }
     ) { paddingValues ->
