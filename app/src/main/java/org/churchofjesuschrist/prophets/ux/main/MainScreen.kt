@@ -5,6 +5,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Sort
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -40,7 +44,16 @@ private fun MainContent(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = stringResource(id = R.string.latter_day_prophets)) }
+                title = { Text(text = stringResource(id = R.string.latter_day_prophets)) },
+                actions = {
+                    IconButton(onClick = uiState.onSortClick) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.Sort,
+                            contentDescription = stringResource(id = R.string.sort_icon_desc),
+                            modifier = Modifier.size(24.dp)
+                        )
+                    }
+                }
             )
         }
     ) { paddingValues ->

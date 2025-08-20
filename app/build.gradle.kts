@@ -62,6 +62,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
 
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -78,6 +79,7 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.hilt.android)
     implementation(libs.kermit)
+    implementation(libs.kotlinx.datetime)
     implementation(libs.ktor.client.cio)
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.client.core)
