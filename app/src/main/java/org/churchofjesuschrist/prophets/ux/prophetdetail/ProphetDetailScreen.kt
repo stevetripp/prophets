@@ -1,5 +1,6 @@
 package org.churchofjesuschrist.prophets.ux.prophetdetail
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -28,7 +29,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import java.time.format.DateTimeFormatter
@@ -43,15 +44,17 @@ import org.churchofjesuschrist.prophets.ui.preview.ProphetPreviewParameterProvid
 @Composable
 fun ProphetDetailScreen(
     viewModel: ProphetDetailViewModel = hiltViewModel(),
-    onNavigateBack: () -> Unit
+    onNavigateBack: () -> Unit,
+    onImageClick: (prophetName: String) -> Unit
 ) {
-    ProphetDetailContent(viewModel.uiState, onNavigateBack = onNavigateBack)
+    ProphetDetailContent(uiState = viewModel.uiState, onNavigateBack = onNavigateBack, onImageClick = onImageClick)
 }
 
 @Composable
 private fun ProphetDetailContent(
     uiState: ProphetDetailUiState,
     onNavigateBack: () -> Unit = { /* Default no-op */ },
+    onImageClick: (prophetName: String) -> Unit = { }
 ) {
     val prophet by uiState.prophetFlow.collectAsStateWithLifecycle()
 
@@ -67,7 +70,7 @@ private fun ProphetDetailContent(
             )
         }
     ) { innerPadding ->
-        prophet?.let {
+        prophet?.let { prophet ->
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -77,19 +80,20 @@ private fun ProphetDetailContent(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 AsyncImage(
-                    model = it.imageUrl,
+                    model = prophet.imageUrl,
                     contentDescription = "Prophet Image",
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(240.dp),
+                        .height(240.dp)
+                        .clickable { onImageClick(prophet.name) },
                     contentScale = ContentScale.Fit
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 // Middle section: prophetCalled, born, apostleCalled, died (born after prophetCalled)
-                InfoRow(label = "Born", value = it.born)
-                InfoRow(label = "Apostle Called", value = it.apostleCalled)
-                InfoRow(label = "Prophet Called", value = it.prophetCalled)
-                InfoRow(label = "Died", value = it.died)
+                InfoRow(label = "Born", value = prophet.born)
+                InfoRow(label = "Apostle Called", value = prophet.apostleCalled)
+                InfoRow(label = "Prophet Called", value = prophet.prophetCalled)
+                InfoRow(label = "Died", value = prophet.died)
                 Spacer(modifier = Modifier.height(24.dp))
                 Text(
                     text = "Notable Quotes",
@@ -98,7 +102,7 @@ private fun ProphetDetailContent(
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Column(modifier = Modifier.fillMaxWidth()) {
-                    it.notableQuotes.forEach { quote ->
+                    prophet.notableQuotes.forEach { quote ->
                         Text(
                             text = "\u2022 $quote",
                             style = MaterialTheme.typography.bodyMedium,

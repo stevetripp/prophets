@@ -11,6 +11,8 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import dagger.hilt.android.AndroidEntryPoint
 import org.churchofjesuschrist.prophets.ui.theme.ProphetsTheme
+import org.churchofjesuschrist.prophets.ux.image.ImageRoute
+import org.churchofjesuschrist.prophets.ux.image.ImageScreen
 import org.churchofjesuschrist.prophets.ux.prophetdetail.ProphetDetailRoute
 import org.churchofjesuschrist.prophets.ux.prophetdetail.ProphetDetailScreen
 
@@ -44,6 +46,21 @@ class MainActivity : ComponentActivity() {
                         )
                     ) { backStackEntry ->
                         ProphetDetailScreen(
+                            onNavigateBack = { navController.popBackStack() },
+                            onImageClick = { prophetName ->
+                                navController.navigate(ImageRoute.createRoute(prophetName))
+                            }
+                        )
+                    }
+                    composable(
+                        route = ImageRoute.ROUTE_PATTERN,
+                        arguments = listOf(
+                            navArgument(ImageRoute.ARG_NAME) {
+                                type = NavType.StringType
+                            }
+                        )
+                    ) { backStackEntry ->
+                        ImageScreen(
                             onNavigateBack = { navController.popBackStack() }
                         )
                     }
