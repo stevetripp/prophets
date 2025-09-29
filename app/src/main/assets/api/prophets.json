@@ -1,10 +1,10 @@
 [
   {
     "name": "Joseph Smith Jr.",
-  "born": "1805-12-23",
-  "died": "1844-06-27",
-  "apostleCalled": null,
-  "prophetCalled": "1830-04-06",
+    "born": "1805-12-23",
+    "died": "1844-06-27",
+    "apostleCalled": null,
+    "prophetCalled": "1830-04-06",
     "notableQuotes": [
       "I told the brethren that the Book of Mormon was the most correct of any book on earth, and the keystone of our religion, and a man would get nearer to God by abiding by its precepts, than by any other book.",
       "The fundamental principles of our religion are the testimony of the apostles and prophets, concerning Jesus Christ, that He died, was buried, and rose again the third day, and ascended into heaven; and all other things which pertain to our religion are only appendages to it.",
@@ -14,10 +14,10 @@
   },
   {
     "name": "Brigham Young",
-  "born": "1801-06-01",
-  "died": "1877-08-29",
-  "apostleCalled": "1835-02-14",
-  "prophetCalled": "1847-12-27",
+    "born": "1801-06-01",
+    "died": "1877-08-29",
+    "apostleCalled": "1835-02-14",
+    "prophetCalled": "1847-12-27",
     "notableQuotes": [
       "This is the place.",
       "My faith is that the God of heaven will not suffer a people who are doing his will to be destroyed.",
@@ -27,10 +27,10 @@
   },
   {
     "name": "John Taylor",
-  "born": "1808-11-01",
-  "died": "1887-07-25",
-  "apostleCalled": "1838-12-19",
-  "prophetCalled": "1880-10-10",
+    "born": "1808-11-01",
+    "died": "1887-07-25",
+    "apostleCalled": "1838-12-19",
+    "prophetCalled": "1880-10-10",
     "notableQuotes": [
       "I am as happy as the Lord can make me in my present condition, and I know that God is with me and will sustain me.",
       "We should be true to God, true to our families, true to our country, true to our friends, and true to ourselves.",
@@ -40,10 +40,10 @@
   },
   {
     "name": "Wilford Woodruff",
-  "born": "1807-03-01",
-  "died": "1898-09-02",
-  "apostleCalled": "1839-04-26",
-  "prophetCalled": "1889-04-07",
+    "born": "1807-03-01",
+    "died": "1898-09-02",
+    "apostleCalled": "1839-04-26",
+    "prophetCalled": "1889-04-07",
     "notableQuotes": [
       "I have had a great many revelations, and I have had a great many manifestations, and I have had a great many dreams and visions.",
       "The Lord will not suffer His people to be led astray if they will only listen to the counsel of the inspired leaders of the Church.",
@@ -53,10 +53,10 @@
   },
   {
     "name": "Lorenzo Snow",
-  "born": "1814-04-03",
-  "died": "1901-10-10",
-  "apostleCalled": "1849-02-12",
-  "prophetCalled": "1898-09-13",
+    "born": "1814-04-03",
+    "died": "1901-10-10",
+    "apostleCalled": "1849-02-12",
+    "prophetCalled": "1898-09-13",
     "notableQuotes": [
       "As man is, God once was; as God is, man may be.",
       "We should be thankful for all things, and in all things give thanks.",
@@ -66,10 +66,10 @@
   },
   {
     "name": "Joseph F. Smith",
-  "born": "1838-11-13",
-  "died": "1918-11-19",
-  "apostleCalled": "1866-07-01",
-  "prophetCalled": "1901-10-17",
+    "born": "1838-11-13",
+    "died": "1918-11-19",
+    "apostleCalled": "1866-07-01",
+    "prophetCalled": "1901-10-17",
     "notableQuotes": [
       "No man can preach the gospel unless he lives it.",
       "The greatest service we can render to the world is to be true to the gospel of Jesus Christ and to live it in our lives.",
@@ -79,10 +79,10 @@
   },
   {
     "name": "Heber J. Grant",
-  "born": "1856-11-22",
-  "died": "1945-05-14",
-  "apostleCalled": "1882-10-16",
-  "prophetCalled": "1918-11-23",
+    "born": "1856-11-22",
+    "died": "1945-05-14",
+    "apostleCalled": "1882-10-16",
+    "prophetCalled": "1918-11-23",
     "notableQuotes": [
       "That which we persist in doing becomes easier to do; not that the nature of the thing has changed, but that our power to do has increased.",
       "The Lord helps those who help themselves.",
@@ -92,10 +92,10 @@
   },
   {
     "name": "George Albert Smith",
-  "born": "1870-04-04",
-  "died": "1951-04-04",
-  "apostleCalled": "1903-04-08",
-  "prophetCalled": "1945-05-21",
+    "born": "1870-04-04",
+    "died": "1951-04-04",
+    "apostleCalled": "1903-04-08",
+    "prophetCalled": "1945-05-21",
     "notableQuotes": [
       "The Lord has a way of taking care of His own.",
       "The greatest happiness that we can have is to be in harmony with the will of the Lord.",
@@ -105,10 +105,10 @@
   },
   {
     "name": "David O. McKay",
-  "born": "1873-09-08",
-  "died": "1970-01-18",
-  "apostleCalled": "1906-04-09",
-  "prophetCalled": "1951-04-09",
+    "born": "1873-09-08",
+    "died": "1970-01-18",
+    "apostleCalled": "1906-04-09",
+    "prophetCalled": "1951-04-09",
     "notableQuotes": [
       "The home is the most important institution on earth and is the foundation of all righteous living.",
       "The gospel of Jesus Christ is a message of hope and joy.",
@@ -118,10 +118,10 @@
   },
   {
     "name": "Joseph Fielding Smith",
-  "born": "1876-07-19",
-  "died": "1972-07-02",
-  "apostleCalled": "1910-04-07",
-  "prophetCalled": "1970-01-23",
+    "born": "1876-07-19",
+    "died": "1972-07-02",
+    "apostleCalled": "1910-04-07",
+    "prophetCalled": "1970-01-23",
     "notableQuotes": [
       "The greatest blessings of the Lord are promised to those who keep His commandments.",
       "The gospel of Jesus Christ is the power of God unto salvation.",
@@ -131,10 +131,10 @@
   },
   {
     "name": "Harold B. Lee",
-  "born": "1899-03-28",
-  "died": "1973-12-26",
-  "apostleCalled": "1941-04-10",
-  "prophetCalled": "1972-07-07",
+    "born": "1899-03-28",
+    "died": "1973-12-26",
+    "apostleCalled": "1941-04-10",
+    "prophetCalled": "1972-07-07",
     "notableQuotes": [
       "The most important work you will ever do is within the walls of your own home.",
       "The gospel of Jesus Christ is the power of God unto salvation.",
@@ -144,10 +144,10 @@
   },
   {
     "name": "Spencer W. Kimball",
-  "born": "1895-03-28",
-  "died": "1985-11-05",
-  "apostleCalled": "1943-10-07",
-  "prophetCalled": "1973-12-30",
+    "born": "1895-03-28",
+    "died": "1985-11-05",
+    "apostleCalled": "1943-10-07",
+    "prophetCalled": "1973-12-30",
     "notableQuotes": [
       "Do it.",
       "The Lord is a God of miracles, and He will work miracles in our lives if we will only be faithful to Him.",
@@ -157,10 +157,10 @@
   },
   {
     "name": "Ezra Taft Benson",
-  "born": "1899-08-04",
-  "died": "1994-05-30",
-  "apostleCalled": "1943-10-07",
-  "prophetCalled": "1985-11-10",
+    "born": "1899-08-04",
+    "died": "1994-05-30",
+    "apostleCalled": "1943-10-07",
+    "prophetCalled": "1985-11-10",
     "notableQuotes": [
       "The Book of Mormon is the word of God. It is a book of truth, and it is a book of power. It is a book of inspiration, and it is a book of hope.",
       "Pride is the universal sin.",
@@ -170,10 +170,10 @@
   },
   {
     "name": "Howard W. Hunter",
-  "born": "1907-11-14",
-  "died": "1995-03-03",
-  "apostleCalled": "1959-10-10",
-  "prophetCalled": "1994-06-05",
+    "born": "1907-11-14",
+    "died": "1995-03-03",
+    "apostleCalled": "1959-10-10",
+    "prophetCalled": "1994-06-05",
     "notableQuotes": [
       "I am an ordinary man. I have been given an extraordinary assignment. I have been called to be a prophet of God.",
       "The greatest blessings of the Lord are promised to those who keep His commandments.",
@@ -183,10 +183,10 @@
   },
   {
     "name": "Gordon B. Hinckley",
-  "born": "1910-06-23",
-  "died": "2008-01-27",
-  "apostleCalled": "1961-10-05",
-  "prophetCalled": "1995-03-12",
+    "born": "1910-06-23",
+    "died": "2008-01-27",
+    "apostleCalled": "1961-10-05",
+    "prophetCalled": "1995-03-12",
     "notableQuotes": [
       "Our homes are our most important places of learning, our most important places of worship.",
       "The gospel of Jesus Christ is the power of God unto salvation.",
@@ -196,10 +196,10 @@
   },
   {
     "name": "Thomas S. Monson",
-  "born": "1927-08-21",
-  "died": "2018-01-02",
-  "apostleCalled": "1963-10-04",
-  "prophetCalled": "2008-02-03",
+    "born": "1927-08-21",
+    "died": "2018-01-02",
+    "apostleCalled": "1963-10-04",
+    "prophetCalled": "2008-02-03",
     "notableQuotes": [
       "Choose to be happy.",
       "The greatest happiness that we can have is to be in harmony with the will of the Lord.",
@@ -209,15 +209,28 @@
   },
   {
     "name": "Russell M. Nelson",
-  "born": "1924-09-09",
-  "died": null,
-  "apostleCalled": "1984-04-07",
-  "prophetCalled": "2018-01-14",
+    "born": "1924-09-09",
+    "died": "2025-09-27",
+    "apostleCalled": "1984-04-07",
+    "prophetCalled": "2018-01-14",
     "notableQuotes": [
       "The temple is the house of the Lord.",
       "The gospel of Jesus Christ is the power of God unto salvation.",
       "The Lord will always be with His people, and He will always sustain them if they will only be faithful to Him."
     ],
     "imageUrl": "https://www.churchofjesuschrist.org/imgs/c5095c402a6d565be72ac46ffda6615ffe88ec5f/full/640%2C/0/default"
+  },
+  {
+    "name": "Dallin H. Oaks",
+    "born": "1932-08-12",
+    "died": null,
+    "apostleCalled": "1984-05-03",
+    "prophetCalled": null,
+    "notableQuotes": [
+      "Desire is not enough. We must act.",
+      "The Atonement of Jesus Christ is the central act of all human history.",
+      "We should be persons of prayer."
+    ],
+    "imageUrl": "https://www.churchofjesuschrist.org/imgs/db96515429b848527e30220394ba6299c297236a/full/!320%2C384/0/default"
   }
 ]
