@@ -3,6 +3,7 @@ activityCompose = "1.11.0"
 agp = "8.13.0"
 androidxComposeMaterialIconsExtended = "1.7.8"
 androidxNavigation = "2.9.5"
+benManesVersions = "0.53.0"
 coil = "2.7.0"
 coilCompose = "2.7.0"
 composeBom = "2025.10.00"
@@ -67,6 +68,7 @@ squareup-okio-assetfilesystem = { group = "com.squareup.okio", name = "okio-asse
 [plugins]
 android-application-plugin = { id = "com.android.application", version.ref = "agp" }
 androidx-room-plugin = { id = "androidx.room", version.ref = "room" }
+ben-manes-versions-plugin = { id = "com.github.ben-manes.versions", version.ref = "benManesVersions" } # ./gradlew dependencyUpdates -Drevision=release
 hilt-android-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlin-android-plugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose-plugin = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
