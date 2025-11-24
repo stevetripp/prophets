@@ -5,5 +5,8 @@ import org.churchofjesuschrist.prophets.data.local.entity.ProphetEntity
 
 data class MainUiState(
     val prophetsFlow: StateFlow<List<ProphetEntity>>,
-    val onSortClick: () -> Unit = {}
+    val sortCriteriaFlow: StateFlow<SortCriteria>,
+    val sortOrderFlow: StateFlow<SortOrder>,
+    val onSortCriteriaChange: (SortCriteria) -> Unit = {},
+    val onSortOrderChange: (SortOrder) -> Unit = {}
 )
