@@ -39,7 +39,7 @@ import java.util.Locale
 
 @Composable
 fun MainScreen(
-    viewModel: MainViewModel = hiltViewModel(),
+    viewModel: MainViewModel,
     onProphetClick: (String) -> Unit
 ) {
     val uiState = viewModel.uiState

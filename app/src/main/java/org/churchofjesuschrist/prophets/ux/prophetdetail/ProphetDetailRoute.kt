@@ -1,14 +1,7 @@
 package org.churchofjesuschrist.prophets.ux.prophetdetail
 
+import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class ProphetDetailRoute(val name: String) {
-    companion object {
-        private const val ROUTE_BASE = "prophetDetail"
-        const val ARG_NAME = "name"
-        const val ROUTE_PATTERN = "$ROUTE_BASE/{$ARG_NAME}"
-
-        fun createRoute(name: String) = "$ROUTE_BASE/$name"
-    }
-}
+data class ProphetDetailRoute(val name: String) : NavKey

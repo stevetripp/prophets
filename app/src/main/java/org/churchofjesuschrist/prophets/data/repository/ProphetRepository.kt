@@ -1,7 +1,6 @@
 package org.churchofjesuschrist.prophets.data.repository
 
 import co.touchlab.kermit.Logger
-import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
@@ -10,6 +9,7 @@ import org.churchofjesuschrist.prophets.data.local.entity.ProphetEntity
 import org.churchofjesuschrist.prophets.util.toEntity
 import org.churchofjesuschrist.prophets.webservice.Cdn
 import org.churchofjesuschrist.prophets.webservice.Result
+import javax.inject.Inject
 
 /**
  * Repository for managing Prophet data from both remote CDN and local database.

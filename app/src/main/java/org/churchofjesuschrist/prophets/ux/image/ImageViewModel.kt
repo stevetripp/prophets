@@ -1,22 +1,21 @@
 package org.churchofjesuschrist.prophets.ux.image
 
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.navigation.toRoute
+import dagger.assisted.Assisted
+import dagger.assisted.AssistedFactory
+import dagger.assisted.AssistedInject
 import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 import kotlinx.coroutines.flow.stateIn
 import org.churchofjesuschrist.prophets.data.repository.ProphetRepository
 
-@HiltViewModel
-class ImageViewModel @Inject constructor(
+@HiltViewModel(assistedFactory = ImageViewModel.Factory::class)
+class ImageViewModel @AssistedInject constructor(
     prophetRepository: ProphetRepository,
-    savedStateHandle: SavedStateHandle,
+    @Assisted imageRoute: ImageRoute,
 ) : ViewModel() {
 
-    private val route = savedStateHandle.toRoute<ImageRoute>()
-    private val prophetFlow = prophetRepository.getProphetByNameFlow(route.name)
+    private val prophetFlow = prophetRepository.getProphetByNameFlow(imageRoute.name)
         .stateIn(
             viewModelScope,
             started = kotlinx.coroutines.flow.SharingStarted.WhileSubscribed(5000),
@@ -26,4 +25,9 @@ class ImageViewModel @Inject constructor(
     val uiState = ImageUiState(
         prophetFlow = prophetFlow,
     )
+
+    @AssistedFactory
+    interface Factory {
+        fun create(route: ImageRoute): ImageViewModel
+    }
 }

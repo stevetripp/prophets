@@ -12,12 +12,11 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 
 @Composable
-fun ImageScreen(onNavigateBack: () -> Unit, viewModel: ImageViewModel = hiltViewModel()) {
+fun ImageScreen(onNavigateBack: () -> Unit, viewModel: ImageViewModel) {
     val prophet by viewModel.uiState.prophetFlow.collectAsStateWithLifecycle()
 
     Scaffold(

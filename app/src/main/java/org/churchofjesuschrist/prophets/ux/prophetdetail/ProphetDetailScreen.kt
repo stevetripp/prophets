@@ -29,21 +29,20 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
-import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
-import java.time.format.DateTimeFormatter
-import java.time.format.FormatStyle
-import java.util.Locale
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.toJavaLocalDate
 import org.churchofjesuschrist.prophets.data.local.entity.ProphetEntity
 import org.churchofjesuschrist.prophets.ui.preview.ProphetPreviewParameterProvider
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
+import java.util.Locale
 
 @Composable
 fun ProphetDetailScreen(
-    viewModel: ProphetDetailViewModel = hiltViewModel(),
+    viewModel: ProphetDetailViewModel,
     onNavigateBack: () -> Unit,
     onImageClick: (prophetName: String) -> Unit
 ) {

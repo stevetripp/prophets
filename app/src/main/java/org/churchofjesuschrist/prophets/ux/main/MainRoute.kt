@@ -1,7 +1,7 @@
-package org.churchofjesuschrist.prophets.ux.image
+package org.churchofjesuschrist.prophets.ux.main
 
 import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class ImageRoute(val name: String) : NavKey
+data object MainRoute : NavKey
