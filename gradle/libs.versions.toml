@@ -69,6 +69,7 @@ squareup-okio-assetfilesystem = { group = "com.squareup.okio", name = "okio-asse
 [plugins]
 android-application-plugin = { id = "com.android.application", version.ref = "agp" }
 androidx-room-plugin = { id = "androidx.room", version.ref = "room" }
+ben-manes-versions-plugin = { id = "com.github.ben-manes.versions", version.ref = "benManesVersions" } # ./gradlew dependencyUpdates -Drevision=release
 hilt-android-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlin-android-plugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose-plugin = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
