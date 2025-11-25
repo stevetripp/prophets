@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application.plugin)
     alias(libs.plugins.androidx.room.plugin)
+    alias(libs.plugins.autonomousapps.dependency.analysis.plugin)
     alias(libs.plugins.hilt.android.plugin)
     alias(libs.plugins.kotlin.android.plugin)
     alias(libs.plugins.kotlin.compose.plugin)
@@ -53,9 +54,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
 
 dependencies {
 
-    androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.ui.test.junit4)
     androidTestImplementation(platform(libs.androidx.compose.bom))
 
     debugImplementation(libs.androidx.ui.test.manifest)
@@ -63,21 +62,16 @@ dependencies {
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material.icons.extended)
-    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.hilt.navigation.compose)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.navigation3)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation3.runtime)
     implementation(libs.androidx.navigation3.ui)
-    implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.coil)
     implementation(libs.coil.compose)
     implementation(libs.hilt.android)
     implementation(libs.kermit)
@@ -95,9 +89,8 @@ dependencies {
     implementation(libs.squareup.okio.assetfilesystem)
     implementation(platform(libs.androidx.compose.bom))
 
-    ksp(libs.hilt.compiler)
     ksp(libs.androidx.room.compiler)
+    ksp(libs.hilt.compiler)
 
     testImplementation(libs.junit)
-    testImplementation(libs.androidx.room.testing)
 }

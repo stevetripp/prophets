@@ -4,6 +4,7 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 plugins {
     alias(libs.plugins.android.application.plugin) apply false
     alias(libs.plugins.androidx.room.plugin) apply false
+    alias(libs.plugins.autonomousapps.dependency.analysis.plugin)
     alias(libs.plugins.ben.manes.versions.plugin)
     alias(libs.plugins.hilt.android.plugin) apply false
     alias(libs.plugins.kotlin.android.plugin) apply false
@@ -35,3 +36,26 @@ fun isNonStable(version: String, includeStablePreRelease: Boolean): Boolean {
     }
     return isStable.not()
 }
+
+// ===== Dependency Analysis =====
+// ./gradlew projectHealth
+dependencyAnalysis {
+    issues {
+        all {
+            onAny { severity("fail") }
+            onUnusedDependencies {
+                exclude(depGroupAndName(libs.androidx.hilt.navigation.compose))
+            }
+            onUsedTransitiveDependencies { severity("ignore") }
+            onIncorrectConfiguration { severity("ignore") }
+            onCompileOnly { severity("ignore") }
+            onRuntimeOnly { severity("ignore") }
+            onUnusedAnnotationProcessors { }
+        }
+    }
+}
+
+fun depGroupAndName(dependency: Provider<MinimalExternalModuleDependency>): String {
+    return dependency.get().let { "${it.group}:${it.name}" }
+}
+
