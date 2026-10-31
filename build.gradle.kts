@@ -7,7 +7,6 @@ plugins {
     alias(libs.plugins.autonomousapps.dependency.analysis.plugin)
     alias(libs.plugins.ben.manes.versions.plugin)
     alias(libs.plugins.hilt.android.plugin) apply false
-    alias(libs.plugins.kotlin.android.plugin) apply false
     alias(libs.plugins.kotlin.compose.plugin) apply false
     alias(libs.plugins.kotlin.serialization.plugin) apply false
     alias(libs.plugins.ksp.plugin) apply false

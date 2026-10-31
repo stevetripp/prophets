@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.androidx.room.plugin)
     alias(libs.plugins.autonomousapps.dependency.analysis.plugin)
     alias(libs.plugins.hilt.android.plugin)
-    alias(libs.plugins.kotlin.android.plugin)
     alias(libs.plugins.kotlin.compose.plugin)
     alias(libs.plugins.kotlin.serialization.plugin)
     alias(libs.plugins.ksp.plugin)
@@ -11,7 +10,7 @@ plugins {
 
 android {
     namespace = "org.churchofjesuschrist.prophets"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "org.churchofjesuschrist.prophets"
@@ -55,7 +54,6 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
 dependencies {
 
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
 
     debugImplementation(libs.androidx.ui.test.manifest)
     debugImplementation(libs.androidx.ui.tooling)
